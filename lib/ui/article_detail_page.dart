@@ -26,7 +26,7 @@ class ArticleDetailPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(article.description!),
+                  Text(article.content ?? "-"),
                   const Divider(color: Colors.grey),
                   Text(
                     article.title,
@@ -42,7 +42,7 @@ class ArticleDetailPage extends StatelessWidget {
                   Text('Author: ${article.author ?? ""}'),
                   const Divider(color: Colors.grey),
                   Text(
-                    article.description!,
+                    article.description ?? "",
                     style: const TextStyle(fontSize: 16),
                   ),
                   const SizedBox(height: 10),
